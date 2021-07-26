@@ -6,4 +6,7 @@
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
     <string name="landlord_email">Landlord/Property\'s Manager\'s Email</string>
+    <string name="login_message">Please sign in to continue</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="do_not_have_account">Don\'t have an account?</string>
 </resources>

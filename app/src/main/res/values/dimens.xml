@@ -4,4 +4,5 @@
     <dimen name="default_button_text">18sp</dimen>
     <dimen name="default_top_margin">8dp</dimen>
     <dimen name="default_bottom_margin">8dp</dimen>
+    <dimen name="text_large">48sp</dimen>
 </resources>
