@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PropertyManagementApplication</string>
+    <string name="main_register">Register</string>
+    <string name="main_login">Log in</string>
+    <string name="user_name">Name</string>
+    <string name="user_email">Email</string>
+    <string name="user_password">Password</string>
+    <string name="landlord_email">Landlord/Property\'s Manager\'s Email</string>
+</resources>
