@@ -22,7 +22,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
+        setupObserver()
         init()
     }
 
@@ -53,15 +53,19 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener,
                     }
                     pd.dismiss()
                 }*/
-                registerViewModel.registerUserCoroutine(user).observe(this){
-                    if (it.error){
-                        Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(this, "Register Successful", Toast.LENGTH_SHORT).show()
-                    }
-                    pd.dismiss()
-                }
+                registerViewModel.registerUserCoroutine(user)
             }
+        }
+    }
+
+    fun setupObserver(){
+        registerViewModel.userLiveData.observe(this){
+            if (it.error){
+                Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Register Successful", Toast.LENGTH_SHORT).show()
+            }
+            pd.dismiss()
         }
     }
 

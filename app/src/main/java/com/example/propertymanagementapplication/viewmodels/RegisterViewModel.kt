@@ -28,7 +28,7 @@ class RegisterViewModel: ViewModel() {
     val inject = DaggerComponent.builder().module(Module()).build().inject(this)
 
 
-    fun registerUserCoroutine(user:User): MutableLiveData<RegisterUserResponse>{
+    fun registerUserCoroutine(user:User){
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val response = UserRepository(propertyService).postUserCoroutine(user)
@@ -43,7 +43,6 @@ class RegisterViewModel: ViewModel() {
                 userLiveData.postValue(RegisterUserResponse(null, true, e.message?:"Unable to register"))
             }
         }
-        return userLiveData
     }
 
 

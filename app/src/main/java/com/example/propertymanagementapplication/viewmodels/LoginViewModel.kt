@@ -11,12 +11,12 @@ import com.example.propertymanagementapplication.models.LoginUserResponse
 import com.example.propertymanagementapplication.repository.PropertyService
 import com.example.propertymanagementapplication.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 import javax.inject.Inject
 
 class LoginViewModel: ViewModel() {
-
     val loginUserLiveData: MutableLiveData<LoginUserResponse> = MutableLiveData()
 
     @Inject
@@ -24,7 +24,7 @@ class LoginViewModel: ViewModel() {
 
     val inject = DaggerComponent.builder().module(Module()).build().inject(this)
 
-    fun loginUser(loginUser:LoginUser): MutableLiveData<LoginUserResponse>{
+    fun loginUser(loginUser:LoginUser){
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val response = UserRepository(propertyService).loginUser(loginUser)
@@ -39,6 +39,5 @@ class LoginViewModel: ViewModel() {
                 loginUserLiveData.postValue(LoginUserResponse(null, null, true, e.message?:"Unable to login"))
             }
         }
-        return loginUserLiveData
     }
 }

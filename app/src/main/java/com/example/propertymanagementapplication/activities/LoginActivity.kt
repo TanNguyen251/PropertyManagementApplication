@@ -18,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupViewModel()
+        setupObserver()
         init()
     }
 
@@ -30,13 +31,21 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.loginEtEmail.text.toString()
             val password = binding.loginPassword.text.toString()
             val loginUser = LoginUser(email, password)
-            loginViewModel.loginUser(loginUser).observe(this) {
-                if(it.error == true){
-                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
-                } else {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                }
+            loginViewModel.loginUser(loginUser)
+        }
+    }
+    fun setupObserver(){
+        loginViewModel.loginUserLiveData.observe(this) {
+            if(it.token != null){
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else {
+                Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
             }
+            /*if(it.error == true){
+                Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
+            } else if (it.error == null){
+                startActivity(Intent(this, HomeActivity::class.java))
+            }*/
         }
     }
 }
