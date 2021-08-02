@@ -5,4 +5,6 @@
     <dimen name="default_top_margin">8dp</dimen>
     <dimen name="default_bottom_margin">8dp</dimen>
     <dimen name="text_large">48sp</dimen>
+    <dimen name="status_margin_end">28dp</dimen>
+    <dimen name="default_checkbox_padding">8dp</dimen>
 </resources>

@@ -1,21 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/default_padding"
-    tools:context=".activities.PropertiesActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activities.PropertiesActivity"
+    android:background="@color/my_theme2">
 
-    <TextView
-        android:id="@+id/properties_tv"
-        android:text="Properties Activity"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:orientation="vertical"
+        android:background="@color/my_theme2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/my_theme1"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/properties_tv_step1"
+                android:text="@string/property_step1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/default_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <TextView
+                android:id="@+id/properties_tv_step1_message"
+                android:text="@string/property_step1_message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/properties_et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:hint="@string/property_address"
+                android:inputType="text"
+                android:autofillHints="postalAddress"
+                android:textSize="@dimen/default_button_text"/>
+
+            <EditText
+                android:id="@+id/properties_et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:hint="@string/property_city"
+                android:inputType="text"
+                android:autofillHints="postalAddress"
+                android:textSize="@dimen/default_button_text"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <EditText
+                android:id="@+id/properties_et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:hint="@string/property_state"
+                android:inputType="text"
+                android:autofillHints="postalAddress"
+                android:textSize="@dimen/default_button_text"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <EditText
+                android:id="@+id/properties_et_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:hint="@string/property_zipcode"
+                android:inputType="textPostalAddress"
+                android:autofillHints="postalCode"
+                android:textSize="@dimen/default_button_text"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <EditText
+                android:id="@+id/properties_et_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:hint="@string/property_country"
+                android:inputType="textCapWords"
+                android:autofillHints="postalAddress"
+                android:textSize="@dimen/default_button_text"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/my_theme1"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/properties_tv_step2"
+                android:text="@string/property_step2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/default_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <TextView
+                android:id="@+id/properties_tv_step2_message"
+                android:text="@string/property_step2_message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/properties_tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/property_status"
+                android:textSize="@dimen/default_button_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <EditText
+                android:id="@+id/properties_et_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:inputType="text"
+                android:textSize="@dimen/default_button_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/properties_tv_status"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <TextView
+                android:id="@+id/properties_tv_multiple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/property_multiple"
+                android:textSize="@dimen/default_button_text"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/properties_tv_status"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <CheckBox
+                android:id="@+id/properties_cb_multiple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/properties_tv_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/property_purchase"
+                android:textSize="@dimen/default_button_text"
+                app:layout_constraintTop_toBottomOf="@id/properties_tv_multiple"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <EditText
+                android:id="@+id/properties_et_purchase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/property_hint_purchase"
+                android:textSize="@dimen/default_button_text"
+                app:layout_constraintWidth_percent="0.6"
+                app:layout_constraintTop_toBottomOf="@id/properties_tv_multiple"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <Button
+                android:id="@+id/properties_btn_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_image_upload"
+                android:drawableStart="@drawable/ic_baseline_photo_camera_24"
+                app:layout_constraintTop_toBottomOf="@id/properties_et_purchase"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/my_theme1"
+                android:padding="@dimen/default_padding">
+                <TextView
+                    android:id="@+id/properties_tv_step3"
+                    android:text="@string/property_step3"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/default_button_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+                <TextView
+                    android:id="@+id/properties_tv_step3_message"
+                    android:text="@string/property_step3_message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/default_button_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_top_margin"
+                    android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/properties_tv_mortgage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/property_mortgage"
+                android:textSize="@dimen/default_button_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <CheckBox
+                android:id="@+id/properties_cb_mortgage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+            <Button
+                android:id="@+id/properties_btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/property_save"
+                android:drawableStart="@drawable/ic_baseline_save_24"
+                app:layout_constraintTop_toBottomOf="@id/properties_tv_mortgage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_top_margin"
+                android:layout_marginBottom="@dimen/default_bottom_margin"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

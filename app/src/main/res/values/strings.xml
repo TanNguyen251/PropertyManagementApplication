@@ -9,4 +9,22 @@
     <string name="login_message">Please sign in to continue</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="do_not_have_account">Don\'t have an account?</string>
+    <string name="property_step1">Step 1: Property Address</string>
+    <string name="property_step1_message">Enter the rental property\'s address below. The address is used to label each property, and make it easier to log trips.</string>
+    <string name="property_address">Address</string>
+    <string name="property_city">City</string>
+    <string name="property_state">State/Province</string>
+    <string name="property_country">Country</string>
+    <string name="property_zipcode">Zip/Postal Code</string>
+    <string name="property_step2">Step 2: Property Details</string>
+    <string name="property_step2_message">Next we\'d like some basic information about the property. If you input the Purchase Price then we can calculate your property\'s Cash on Cash invested % correctly</string>
+    <string name="property_status">Status</string>
+    <string name="property_multiple">Are there multiple unit?</string>
+    <string name="property_purchase">Purchase Price</string>
+    <string name="property_hint_purchase">How much did you purchase the property for?</string>
+    <string name="button_image_upload">Add Photo of Your Property</string>
+    <string name="property_step3">Step 3: Mortgage Information</string>
+    <string name="property_step3_message">If your property has a mortgage, then inputting its mortgage terms enables Houster to automatically set the principle, interest, and escrow amounts when you log mortgage payment transaction. If you made extra principal payments, then logging them as mortgage principal transaction will update the amortization schedule.</string>
+    <string name="property_mortgage">Does this property has a mortgage?</string>
+    <string name="property_save"><![CDATA[Save & Add Tenants]]></string>
 </resources>

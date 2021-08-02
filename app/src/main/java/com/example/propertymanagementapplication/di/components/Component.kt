@@ -4,6 +4,7 @@ import com.example.propertymanagementapplication.activities.HomeActivity
 import com.example.propertymanagementapplication.di.modules.Module
 import com.example.propertymanagementapplication.viewmodels.HomeViewModel
 import com.example.propertymanagementapplication.viewmodels.LoginViewModel
+import com.example.propertymanagementapplication.viewmodels.PropertyViewModel
 import com.example.propertymanagementapplication.viewmodels.RegisterViewModel
 import dagger.Component
 import javax.inject.Singleton
@@ -15,4 +16,5 @@ interface Component {
     fun inject(registerViewModel: RegisterViewModel)
     fun inject(homeActivity: HomeActivity)
     fun inject(homeViewModel: HomeViewModel)
+    fun inject(propertyViewModel: PropertyViewModel)
 }

@@ -1,12 +1,10 @@
 package com.example.propertymanagementapplication.repository
 
-import com.example.propertymanagementapplication.models.LoginUser
-import com.example.propertymanagementapplication.models.LoginUserResponse
-import com.example.propertymanagementapplication.models.RegisterUserResponse
-import com.example.propertymanagementapplication.models.User
+import com.example.propertymanagementapplication.models.*
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.Multipart
 import retrofit2.http.POST
 
 interface PropertyService {
@@ -16,4 +14,6 @@ interface PropertyService {
     suspend fun registerUserCoroutine(@Body user: User): Response<RegisterUserResponse>
     @POST("auth/login")
     suspend fun loginUser(@Body loginUser: LoginUser): Response<LoginUserResponse>
+    @POST
+    suspend fun addProperty(@Body property: Property): Response<PropertyResponse>
 }
